@@ -58,34 +58,94 @@ a:active {
   padding: 5px;
 }
 
-#input-panel > input {
-  display: block;
-
+#input-panel div input {
   height: 40px;
   width: 600px;
 
   border: solid rgb(57, 132, 182) 1px;
+  border-radius: 5px;
   margin: 10px;
 
   font-size: larger;
+  outline: none;
 }
+
+
+#input-panel div input:focus {
+  background-color: rgba(57, 132, 182, 0.2);
+  border: 2px solid rgb(242, 121, 110);
+}
+
+#input-panel div i {
+  position: absolute;
+  padding: 10px;
+}
+
+.success-icon,
+.failure-icon {
+  font-size: 35px;
+  right: 0;
+  opacity: 0;
+}
+
+.failure-icon,
+.error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+} 
 
 #input-panel > button {
+  margin: 10px;
+  border: 1px solid white;
   color: white;
-  background-color: rgb(57, 132, 182);
-
-  width: 200px;
-  height: 40px;
-
-  border: none;
-  margin-left: 10px;
-
+  padding: 20px 40px;
+  border-radius: 5px;
   font-size: larger;
   font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  cursor: pointer;
 }
 
-#input-panel > button:active {
-  background-color: black;
+#input-panel > button:hover {
+  color: white;
+  transition: 0.2s;
+}
+
+#input-panel > #input-btn {
+  background-color: rgb(57, 132, 182);
+}
+
+#input-panel > #input-btn:hover {
+  background-color: rgb(0, 95, 95);
+}
+
+#input-panel > #input-btn:active {
+  background-color: white;
+  color: rgb(57, 132, 182);
+  border: 1px solid rgb(57, 132, 182);
+}
+
+#input-panel > #delete-btn {
+  background-color: red;
+}
+
+#input-panel > #delete-btn:hover {
+  background-color: rgb(95, 0, 0);
+}
+
+#input-panel > #delete-btn:active {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
 }
 
 .wa-btns {
@@ -115,3 +175,4 @@ a:active {
 
   border: 1px solid green;
 }
+
