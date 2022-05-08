@@ -41,7 +41,8 @@ deleteBtn.addEventListener("dblclick", () => {
   productList = []
 })
 
-inputBtn.addEventListener("click", () => {
+inputBtn.addEventListener("click", (e) => {
+  e.preventDefault()
   if (nameInput.value.trim() === "" || imgInput.value.trim() === "" || waNoInput.value.trim() === "") {
     if(nameInput.value.trim() === "") {
      invalid(nameInput, 0, "Product Name cannot be blank");
@@ -65,7 +66,7 @@ inputBtn.addEventListener("click", () => {
       nameInput.value,
       imgInput.value,
       waNoInput.value,
-      `<a href='https://wa.me/${waNoInput.value}' target="_blank" id='btn${counter}' class='wa-btns'>${waNoInput.value}</a>`,
+      `<a href='https://wa.me/234${waNoInput.value}' target="_blank" id='btn${counter}' class='wa-btns'>${waNoInput.value}</a>`,
     ])
     localStorage.setItem("productList", JSON.stringify(productList) )
     counter++

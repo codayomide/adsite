@@ -2,6 +2,7 @@
 
 <html>
     <head>
+        <!-- <link rel="stylesheet" href="style.css"> -->
         <link rel="stylesheet" href="test.css">
         <link rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -14,49 +15,62 @@
     </head>
 
     <body>
-        <h1 style="color: rgb(57, 132, 182);">Test Page</h1>    
-        
-        <form id="input-panel" >
-            <div>
-                <input 
-                    type="text" 
-                    placeholder="Product name" 
-                    id="name-input"
-                />
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-                <div class="error"></div>
+        <div id="container">
+            <div id="info">
+                <h1 style="color: white;">Test Page</h1> 
             </div>
-            
-            <div>
-                <input 
-                    type="text" 
-                    placeholder="image url" 
-                    id="img-input"
-                />
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-                <div class="error"></div>
-            </div>
-            
-            <div>
-                <input 
-                    type="text" 
-                    placeholder="Whatsapp number" 
-                    id="wa-no-input"
-                />
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-                <div class="error"></div>
-            </div>
+              
+            <form id="input-panel" >
+                <div>
+                    <h1>Create Product</h1>
+                </div>
+                <div>
+                    <label for="product-name">Product Name</label>
+                    <input 
+                        type="text" 
+                        placeholder="MyProduct" 
+                        id="name-input"
+                    />
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+                    <div class="error"></div>
+                </div>
+                
+                <div>
+                    <label for="image-url">Image URl</label>
+                    <input 
+                        type="text" 
+                        placeholder="image URL" 
+                        id="img-input"
+                    />
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+                    <div class="error"></div>
+                </div>
+                
+                <div>
+                    <label for="whatsapp-number">Whatsapp Number(+234)</label>
+                    <input 
+                        type="text" 
+                        placeholder="01234567890" 
+                        id="wa-no-input"
+                    />
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+                    <div class="error"></div>
+                </div>
 
-            <button type="submit" id="input-btn">SUBMIT</button>
-            <button id="delete-btn">DELETE ALL</button>
-        </form>
+                <div>
+                    <button type="submit" id="input-btn">CREATE</button>
+                    <button id="delete-btn">DELETE ALL</button>
+                </div>
 
-        <a href="index.html">Go To Home Page ></a>
-        <p><a href="create-products.html">Create New Products ></a></p> 
-        
+                <div>
+                    <a href="index.html">Back To Home Page ></a>
+                    <a href="create-products.html">Go To Create Products Page ></a>
+                </div> 
+            </form>
+        </div>    
         <script src="test.js"></script>
     </body>
 </html>
