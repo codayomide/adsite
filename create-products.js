@@ -70,5 +70,9 @@ inputBtn.addEventListener("click", (e) => {
     ])
     localStorage.setItem("productList", JSON.stringify(productList) )
     counter++
+    nameInput.value = ""
+    imgInput.value = ""
+    waNoInput.value = ""
+
   }
 })
